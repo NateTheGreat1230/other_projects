@@ -1,0 +1,258 @@
+<html>
+<head>
+    <title>Sooubway Sandwiches</title>
+    <link rel="stylesheet" href="main.css"/>
+    <script src="sandwich.js" defer></script>
+    <script src="drink.js" defer></script>
+    <script src="sides.js" defer></script>
+    <script src="order.js" defer></script>
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div>Check out my live sandwich builder confirmation and my fancy checkboxes and radio buttons that aid with touchscreen compatability.</div>
+    <div>Also I added the ability to 'complete' an order by either double clicking the order card or by entering the order number.</div>
+    <div class="outer-div">
+        <h1>
+            Welcome to Sooubway Sandwiches!
+        </h1>
+        <p>
+            Fill out the form below to order your custom sandwich.
+        </p>
+        <form id="orderForm" class="boarder">
+            <h2>
+                Size
+            </h2>
+            <div class="flex-row">
+                <div>
+                    <input id="Small" type="radio" name="size" value="Small">
+                    <label for="Small">Small</label>
+                </div>
+                <div>
+                    <input id="Medium" type="radio" name="size" value="Medium">
+                    <label for="Medium">Medium</label>
+                </div>
+                <div>
+                    <input id="Large" type="radio" name="size" value="Large">
+                    <label for="Large">Large</label>
+                </div>
+            </div>
+            <h2>
+                Bread
+            </h2>
+            <div class="flex-row">
+                <div>
+                    <input id="White" type="radio" name="bread" value="White">
+                    <label for="White">White</label>
+                </div>
+                <div>
+                    <input id="Wheat" type="radio" name="bread" value="Wheat">
+                    <label for="Wheat">Wheat</label>
+                </div>
+                <div>
+                    <input id="Sourdough" type="radio" name="bread" value="Sourdough">
+                    <label for="Sourdough">Sourdough</label>
+                </div>
+                <div>
+                    <input id="Multigrain" type="radio" name="bread" value="Multigrain">
+                    <label for="Multigrain">Multigrain</label>
+                </div>
+            </div>
+            <h2>
+                Meat
+            </h2>
+            <label class="dropdownLabel" for="meatType">Choose a meat:</label>
+            <select name="meat" id="meatType" class="dropdown">
+                <option value="">Select</option>
+                <option value="Bacon">Bacon</option>
+                <option value="Ham">Ham</option>
+                <option value="Turkey">Turkey</option>
+                <option value="Roast Beef">Roast Beef</option>
+                <option value="Salami">Salami</option>
+                <option value="Chicken">Chicken</option>
+            </select>
+            <h2>
+                Cheese
+            </h2>
+            <div class="flex-row">
+                <div>
+                    <input id="Cheddar" type="radio" name="cheese" value="Cheddar">
+                    <label for="Cheddar">Cheddar</label>
+                </div>
+                <div>
+                    <input id="Provolone" type="radio" name="cheese" value="Provolone">
+                    <label for="Provolone">Provolone</label>
+                </div>
+                <div>
+                    <input id="Mozzarella" type="radio" name="cheese" value="Mozzarella">
+                    <label for="Mozzarella">Mozzarella</label>
+                </div>
+                <div>
+                    <input id="Pepper-Jack" type="radio" name="cheese" value="Pepper Jack">
+                    <label for="Pepper-Jack">Pepper Jack</label>
+                </div>
+            </div>
+            <div>
+                <h2>
+                    Toppings
+                </h2>
+                <table>
+                    <tr>
+                        <td>
+                            <input type="checkbox" id="Lettuce" name="toppings" value="Lettuce">
+                            <label for="Lettuce">Lettuce</label>
+                        </td>
+                        <td>
+                            <input type="checkbox" id="Pickles" name="toppings" value="Pickles">
+                            <label for="Pickles">Pickles</label>
+                        </td>
+                        <td>
+                            <input type="checkbox" id="Tomatoes" name="toppings" value="Tomatoes">
+                            <label for="Tomatoes">Tomatoes</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" id="Jalapenos" name="toppings" value="Jalapenos">
+                            <label for="Jalapenos">Jalapenos</label>
+                        </td>
+                        <td>
+                            <input type="checkbox" id="Avocado" name="toppings" value="Avocado">
+                            <label for="Avocado">Avocado</label>
+                        </td>
+                        <td>
+                            <input type="checkbox" id="Onions" name="toppings" value="Onions">
+                            <label for="Onions">Onions</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" id="Cucumbers" name="toppings" value="Cucumbers">
+                            <label for="Cucumbers">Cucumbers</label>
+                        </td>
+                        <td>
+                            <input type="checkbox" id="Peppers" name="toppings" value="Peppers">
+                            <label for="Peppers">Peppers</label>
+                        </td>
+                        <td>
+                            <input type="checkbox" id="Olives" name="toppings" value="Olives">
+                            <label for="Olives">Olives</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <h2>
+                Drink Size (Optional)
+            </h2>
+            <div class="flex-row">
+                <div>
+                    <input id="none" type="radio" name="drinkSize" value="">
+                    <label for="none">No Drink</label>
+                </div>
+                <div>
+                    <input id="SmallDR" type="radio" name="drinkSize" value="Small">
+                    <label for="SmallDR">Small</label>
+                </div>
+                <div>
+                    <input id="MediumDR" type="radio" name="drinkSize" value="Medium">
+                    <label for="MediumDR">Medium</label>
+                </div>
+                <div>
+                    <input id="LargeDR" type="radio" name="drinkSize" value="Large">
+                    <label for="LargeDR">Large</label>
+                </div>
+            </div>
+            <h2>
+                Drink (Optional)
+            </h2>
+            <label class="dropdownLabel" for="drinkVariety">Choose a drink:</label>
+            <select name="drink" id="drinkVariety" class="dropdown">
+                <option value="">Select</option>
+                <option value="Coke">Coke</option>
+                <option value="Dr. Pepper">Dr. Pepper</option>
+                <option value="Rootbeer">Rootbeer</option>
+                <option value="Mtn. Dew">Mtn. Dew</option>
+                <option value="Water">Water</option>
+            </select>
+            <div>
+                <h2>
+                    Sides (Optional)
+                </h2>
+                <table>
+                    <tr>
+                        <td>
+                            <input type="checkbox" id="Cookie" name="sides" value="Cookie">
+                            <label for="Cookie">Cookie</label>
+                        </td>
+                        <td>
+                            <input type="checkbox" id="Bagel" name="sides" value="Bagel">
+                            <label for="Bagel">Bagel</label>
+                        </td>
+                        <td>
+                            <input type="checkbox" id="Brownie" name="sides" value="Brownie">
+                            <label for="Brownie">Brownie</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" id="Carrots" name="sides" value="Carrots">
+                            <label for="Carrots">Carrots</label>
+                        </td>
+                        <td>
+                            <input type="checkbox" id="Peas" name="sides" value="Peas">
+                            <label for="Peas">Peas</label>
+                        </td>
+                        <td>
+                            <input type="checkbox" id="Chips" name="sides" value="Chips">
+                            <label for="Chips">Chips</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+        <div>
+            Confirmation
+            <div id="output"></div>
+            <button id="submit">Submit Order</button>
+        </div>
+    </div>
+    <div class="outer-div">
+        <h1>
+            Sooubway Sandwiches Order Fulfillment
+        </h1>
+        <p>
+            Ordered sandwiches show up here:
+        </p>
+        <div>
+            <div>
+                <table class="table-size">
+                    <tr>
+                        <td class="header">New Order</td>
+                        <td class="header">Waiting</td>
+                        <td class="header">Urgent</td>
+                    </tr>
+                    <tr class="boarder">
+                        <td class="box green" id="ordersGreen"></td>
+                        <td class="box yellow" id="ordersYellow"></td>
+                        <td class="box red" id="ordersRed"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <p>Which order do you want to complete?</p>
+        <input type="number" id="completedNum">
+        <button id="complete">Complete Order</button>
+        <p id="error1" class="error"><br></p>
+    </div>
+    <div class="outer-div">
+        <h1>
+            Sooubway Sandwiches Order History
+        </h1>
+        <p>
+            All completed orders are below:
+        </p>
+        <div class="boarder">
+            <div id="completed"></div>
+        </div>
+    </div>
+</body>
+</html>
