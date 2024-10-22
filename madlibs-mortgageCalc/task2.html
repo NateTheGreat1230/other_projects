@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+    <script src="task2-calculations.js" defer></script>
+    <script src="task2-report.js" defer></script>
+    <script src="task2.js" defer></script>
+</head>
+<body>
+    <h1>Mortgage Calculator</h1>
+    <h2>Enter values below to calculate how much you will need to pay each month to buy your house.</h2>
+    <div>
+        <div>
+            <span>Enter the loan amount: </span>
+            <input type="text" id="amount" placeholder="ex: 100000">
+            <span id="err1" class="error"></span>
+        </div>
+        <div>
+            <span>Enter the annual interest rate: </span>
+            <input type="text" id="interest" placeholder="ex: 5.5">
+            <span id="err2" class="error"></span>
+        </div>
+        <div>
+            <span>Enter the number of years to payoff: </span>
+            <input type="text" id="years" placeholder="ex: 30">
+            <span id="err3" class="error"></span>
+        </div>
+    </div>
+    <div>
+        <span>Payment: $</span>
+        <span id="payment"></span>
+    </div>
+    <button id="addReport">Add to Report</button>
+    <div>
+        <p>Report</p>
+        <div id="report"></div>
+    </div>
+    <button id="clearReport">Clear Report</button>
+</body>
+</html>

@@ -1,0 +1,60 @@
+body {
+    background-color: #8403fc;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.main-div {
+    background-color: rgba(0, 0, 0, 0.74);
+    border-radius: 25px;
+    margin: 100px;
+    padding: 10px 50px;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    
+}
+
+@media (max-width: ) {
+    .main-div {
+        
+    }
+}
+
+.content {
+    display: flex;
+    text-align: left;
+}
+
+.content > div {
+    width: 350px;
+    margin: 10px;
+    padding: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 25px;
+    border: 3px solid white;
+}
+
+.error {
+    color: red;
+    margin: 0;
+}
+
+span {
+    display: inline-block;
+    width: 100px;
+}
+
+button {
+    width: 150px;
+}
